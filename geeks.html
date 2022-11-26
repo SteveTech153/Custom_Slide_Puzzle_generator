@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        How to crop image
+        using canvas?
+    </title>
+</head>
+    
+<body>
+
+    <h2>Source Image</h2>
+    <img id="myImage" src= "\puzzle-vadivelu.jpg";
+
+        alt="GeeksForGeeks">
+
+    <h2>Cropped Image</h2>
+
+    <canvas id="myCanvas" width="1000" height="1000" 
+        style="border:3px solid">
+        HTML5 canvas tag is not 
+        supported by your browser.
+    </canvas>
+
+    <script>
+        window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var contex = canvas.getContext("2d");
+        var canvas = document.getElementById("myCanvas");
+        // change the canvas size
+        
+          var img = document.getElementById("myImage");
+            let originalHeight = img.clientHeight;
+            let originalWidth = img.clientWidth;
+        canvas.width = originalWidth/3;
+        canvas.height = originalHeight/3;
+            contex.drawImage(img, 0, 0, 
+            originalWidth,originalHeight, 0, 0, Math.min(originalHeight,originalWidth), Math.min(originalHeight,originalWidth)); 
+            //get the image data from the canvas
+            var dataURL = canvas.toDataURL("image/png");
+            //set the source of the image to the data url
+            document.getElementById("myImage").src = data;
+            canvas.hidden=false;
+        }
+    </script>
+</body>
+  
+</html>

@@ -1,0 +1,59 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+  .puzzle{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    background-color:#1F3D4F;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    height: 200px;
+    width: 200px;
+ }
+ .btn:hover{
+    background-color: #1F3D4F;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+ }
+ #canvas{
+    margin-left: 30%;
+ }
+ 
+/*   
+#btn-1{
+    background-image: url("images/1-200.jpg")
+}
+#btn-2{
+    background-image: url("images/2-200.jpg")
+}
+#btn-3{
+    background-image: url("images/3-200.jpg")
+}
+#btn-4{
+    background-image: url("images/4-200.jpg")
+}
+#btn-5{
+    background-image: url("images/5-200.jpg")
+}
+#btn-6{
+    background-image: url("images/6-200.jpg")
+}
+#btn-7{
+    background-image: url("images/7-200.jpg")
+}
+#btn-8{
+    background-image: url("images/8-200.jpg")
+}
+#btn-9{
+    background-color: #1F3D4F;
+}
+
+
+
+ */
