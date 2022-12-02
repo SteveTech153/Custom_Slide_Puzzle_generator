@@ -1,3 +1,4 @@
+// bug iruku da doii
 let prev = 9;
 let valids = {
     1: [2, 4],
@@ -10,6 +11,7 @@ let valids = {
     8: [5, 7, 9],
     9: [6, 8]
 };
+let bg = [0, 1, 2, 3, 4, 5, 6, 7];
 let CorrectPosition = [];
 let flag = true;  
 if (flag) {
@@ -58,6 +60,7 @@ function check() {
     let flag1 = true;
     for (let i = 0; i < btns.length; i++) {
         if (btns[i].style.backgroundImage != CorrectPosition[i]) {
+            // alert(i);
             flag1 = false;
             break; 
         }
@@ -69,6 +72,17 @@ function check() {
     }
 }
 
+document.querySelector("#shuffle").addEventListener("click", shuffler);
+
+function shuffler() {
+    shuffleArray(bg);
+    for (let i = 0; i < btns.length-1; i++) {
+        btns[i].style.backgroundImage = CorrectPosition[bg[i]];
+    }
+    btns[8].style.backgroundImage = "url('images/bg.jpg')";  
+    prev = 9;
+}
+
 ////////
 function setup() {
     var canvas = document.getElementById("canvas");
@@ -77,42 +91,42 @@ function setup() {
         let dataURL;
         let btns = document.querySelectorAll(".btn");
         var userimage = new Image(); userimage.src = sessionStorage.getItem("userimage");
-        document.body.appendChild(userimage); userimage.style.visibility = "hidden";
+    document.body.appendChild(userimage); userimage.style.visibility = "hidden";
         let originalHeight = userimage.clientHeight;
         let originalWidth = userimage.clientWidth;
         canvas.width = originalWidth / 3 ;
         canvas.height = originalHeight / 3 ;
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, 0, 0, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[0].style.backgroundImage = "url('" + dataURL + "')";
+        btns[0].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[0].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, -200, 0, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[1].style.backgroundImage = "url('" + dataURL + "')";
+        btns[1].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[1].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, -400, 0, 600, 600);
-        dataURL = canvas.toDataURL();
-        btns[2].style.backgroundImage = "url('" + dataURL + "')";
+         dataURL = canvas.toDataURL();
+        btns[2].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[2].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, 0, -200, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[3].style.backgroundImage = "url('" + dataURL + "')";
+        btns[3].style.backgroundImage = "url(" + dataURL + ")";    
         CorrectPosition.push(btns[3].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, -200, -200, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[4].style.backgroundImage = "url('" + dataURL + "')";
+        btns[4].style.backgroundImage = "url(" + dataURL + ")";    
         CorrectPosition.push(btns[4].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, -400, -200, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[5].style.backgroundImage = "url('" + dataURL + "')";
+        btns[5].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[5].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, 0, -400, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[6].style.backgroundImage = "url('" + dataURL + "')";
+        btns[6].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[6].style.backgroundImage);
         contex.drawImage(userimage, 0, 0, originalWidth, originalHeight, -200, -400, 600, 600);
         dataURL = canvas.toDataURL();
-        btns[7].style.backgroundImage = "url('" + dataURL + "')";
+        btns[7].style.backgroundImage = "url(" + dataURL + ")";
         CorrectPosition.push(btns[7].style.backgroundImage);
         btns[8].style.backgroundImage = "url('images/bg.jpg')";
         CorrectPosition.push(btns[8].style.backgroundImage);
@@ -121,7 +135,8 @@ function setup() {
                     window.location = window.location + '#';
                     window.location.reload();
                 } 
-            }
+    } 
+        userimage.style.display = "none";
 }
 
 function toDataURL1(src){
