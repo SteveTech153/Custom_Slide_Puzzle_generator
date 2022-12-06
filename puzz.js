@@ -1,4 +1,3 @@
-// bug iruku da doii
 let prev = 9;
 let valids = {
     1: [2, 4],
@@ -36,6 +35,11 @@ if (flag2) {
     flag2 = false;
 }
 
+// document.querySelector('.plusBtn').addEventListener('click', function(e) {
+//   e.preventDefault();
+//   let clickEvent = new Event('click');
+// document.getElementById('savedPuzzBtn').dispatchEvent(clickEvent)
+// })
 
 function shuffleArray(ar)
 {
@@ -71,6 +75,10 @@ function check() {
         }, 100);
     }
 }
+
+document.querySelector("#reset").addEventListener("click", function () {
+    window.location.reload();
+});
 
 document.querySelector("#shuffle").addEventListener("click", shuffler);
 

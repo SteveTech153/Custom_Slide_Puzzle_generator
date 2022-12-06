@@ -1,15 +1,14 @@
-.body{
+*{
     margin: 0;
     padding: 0;
 }
-  .puzzle{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+.puzzle{    
     display: flex;
-    background-color:#1F3D4F;
+    height: 100vh;
+    background-color: cadetblue;
     justify-content: center;
     align-items: center;
+    border: 2px solid black;
 }
 .btn{
     height: 200px;
@@ -24,36 +23,40 @@
  #canvas{
     margin-left: 30%;
  }
- 
-/*   
-#btn-1{
-    background-image: url("images/1-200.jpg")
-}
-#btn-2{
-    background-image: url("images/2-200.jpg")
-}
-#btn-3{
-    background-image: url("images/3-200.jpg")
-}
-#btn-4{
-    background-image: url("images/4-200.jpg")
-}
-#btn-5{
-    background-image: url("images/5-200.jpg")
-}
-#btn-6{
-    background-image: url("images/6-200.jpg")
-}
-#btn-7{
-    background-image: url("images/7-200.jpg")
-}
-#btn-8{
-    background-image: url("images/8-200.jpg")
-}
-#btn-9{
+ .navbar{
+    width: 100%;
     background-color: #1F3D4F;
+    color: #F1F8BB!important;
 }
-
-
-
- */
+.nav-link{
+    color: #F1F8BB!important;
+}
+.navbar-brand{
+    color: #F1F8BB!important;
+}
+.navv{
+    background-color:cyan!important;
+    color: #F1F8BB!important;
+}
+.myTable{
+    margin-top: -3%;
+    margin-left: 7%;
+}
+.functionalBtns{
+    position: relative;
+    left: 8%;
+    margin-top: 25%;
+}
+#shuffle{
+  width: 200%;
+  height: 50px;   
+  margin-bottom: 10%;
+  border-radius: 10px;
+  background-color: linear-gradient(to bottom right, #ACC6C7, #90BDBF);
+}
+#reset{
+  width: 200%;
+  height: 50px;   
+  border-radius: 10px;
+  background-color: linear-gradient(to bottom right, #ACC6C7, #90BDBF) ;
+}

@@ -1,0 +1,149 @@
+.upload{
+    width: 70%;
+    margin-top: 7%;
+    height: 100%;
+    margin-left: 10%;
+    height: 50vh;
+    display: inline-flex;
+}
+body{
+    height: 100vh;
+    /* background-image: url("/images/background2.jpg"); */
+   background: cadetblue;
+    backdrop-filter: blur(4px);
+}
+.navbar{
+    display: flex;
+    width: 118.8%;
+    margin-left: -9.5%;
+    background : linear-gradient(to right, #1F3D4F, #427fa5);
+    color: #F1F8BB!important;
+}
+.nav-link{
+    color: #F1F8BB!important;
+}
+.navbar-brand{
+    color: #F1F8BB!important;
+}
+.plusBtn{
+    margin-top:10%;
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10%;
+    background-image: url("/images/plus.png");
+    background-color: white;
+    border: 0;
+}
+.card-title{
+    display: flex !important;
+    justify-content: center!important;
+}
+.card-text
+{
+    margin-top: 15%;
+    display: flex !important;
+    justify-content: center!important;
+    color: skyblue;
+}
+.card{
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    padding-top: 4%;
+    /* add strong background shadow */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* #ACC6C7, #90BDBF */ 
+    
+}
+
+    /*Trigger Button*/
+  .login-trigger {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom right, #B05574, #F87E7B);
+    padding: 15px 30px;
+    border-radius: 30px;
+    position: relative; 
+    top: 50%;
+  }
+  
+  /*Modal*/
+  h4 {
+    font-weight: bold;
+    color: #fff;
+  }
+  .close {
+    color: #fff;
+    transform: scale(1.2)
+  }
+  .modal-content {
+    font-weight: bold;
+    background: linear-gradient(to bottom right,#F87E7B,#B05574);
+  }
+  .form-control {
+    margin: 1em 0;
+  }
+  .form-control:hover, .form-control:focus {
+    box-shadow: none;  
+    border-color: #fff;
+  }
+  .username, .password {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;  
+  }
+  .form-control::-webkit-input-placeholder {
+    color: #eee;  
+  }
+  .form-control:focus::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
+  }
+  .login {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid #FAB87F;
+    color: #FAB87F;
+    font-weight: bold;
+    transition: all .5s;
+    margin-top: 1em;
+  }
+  .login:hover {
+    background: #FAB87F;
+    color: #fff;
+  }
+  input::file-selector-button {
+      background-image: url("/images/plus.png");
+      background-color: white; 
+      border: none;
+      height: 80px;
+      width: 90px;
+      display: block;
+      margin-left: 25%;
+      margin-top: 30%;
+      padding-left: 40%;
+      padding-top: 46%;
+  }
+  .card.saved{
+    background-image: url("/images/saved-puzzles-background.png");
+    background-size: cover;
+  } 
+  .card-title{
+    color: yellow;
+    /* add shadow */
+    text-shadow: 2px 2px 2px #000000;
+    font-size: larger;
+    font-size: 30px;
+    margin-top: -10%;
+  }
+  
+  
+  
