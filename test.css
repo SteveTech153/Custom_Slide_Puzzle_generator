@@ -4,11 +4,12 @@
 }
 .puzzle{    
     display: flex;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-color: cadetblue;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    margin-top: -3%;
 }
 .btn{
     height: 200px;
@@ -20,10 +21,9 @@
     border: 1px solid #fff;
     cursor: pointer;
  }
- #canvas{
-    margin-left: 30%;
- }
  .navbar{
+    padding-left: 5% !important;
+    margin: 0;
     width: 100%;
     background-color: #1F3D4F;
     color: #F1F8BB!important;
@@ -37,10 +37,6 @@
 .navv{
     background-color:cyan!important;
     color: #F1F8BB!important;
-}
-.myTable{
-    margin-top: -3%;
-    margin-left: 7%;
 }
 .functionalBtns{
     position: relative;
