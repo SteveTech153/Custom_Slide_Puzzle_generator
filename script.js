@@ -6,14 +6,14 @@ image_input.addEventListener("change", function () {
     sessionStorage.setItem("userimage", userimage);
     });
     reader.readAsDataURL(this.files[0]);
+    document.getElementById("upload-res").innerHTML = "(Image Selected)"; 
+    document.getElementById("upload-res").style.color = "green";
 });
 
 function redirect() {
     window.location.href = "puzz.html";
 }
-$("input[type='image']").click(function() {
-    $("input[id='my_file']").click();
-});
+
 // let btns = document.querySelectorAll(".btn");
 // btns[0].style.backgroundImage = image1;
 // let prev = 9;

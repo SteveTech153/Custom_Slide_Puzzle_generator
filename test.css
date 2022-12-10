@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .puzzle{    
     display: flex;
@@ -9,7 +10,11 @@
     background-color: cadetblue;
     justify-content: center;
     align-items: center;
-    margin-top: -3%;
+    padding-bottom: 2%;
+}
+.mytable{
+    padding: 0%;
+    margin: 0%;
 }
 .btn{
     height: 200px;
@@ -44,15 +49,19 @@
     margin-top: 25%;
 }
 #shuffle{
-  width: 200%;
+  width: 120%;
   height: 50px;   
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
+  margin: 10% 0%;
   border-radius: 10px;
   background-color: linear-gradient(to bottom right, #ACC6C7, #90BDBF);
 }
 #reset{
-  width: 200%;
+  width: 120%;
   height: 50px;   
   border-radius: 10px;
   background-color: linear-gradient(to bottom right, #ACC6C7, #90BDBF) ;
+}
+.puzzle-box{
+    display: inline;
 }
